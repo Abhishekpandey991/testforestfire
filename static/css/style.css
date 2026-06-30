@@ -1,0 +1,122 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:#333;
+}
+
+.container{
+    width:90%;
+    max-width:480px;
+    background:#fdfefe;
+    border-radius:22px;
+    padding:36px 32px;
+    box-shadow:0 24px 60px rgba(0,0,0,.18);
+}
+
+h1{
+    text-align:center;
+    color:#1f3b73;
+    margin-bottom:18px;
+    letter-spacing:.4px;
+}
+
+h2{
+    text-align:center;
+    color:#2b3a52;
+    margin-top:22px;
+}
+
+p{
+    text-align:center;
+    color:#575d6b;
+    margin-bottom:28px;
+    line-height:1.75;
+}
+
+.input-group{
+    margin-bottom:16px;
+}
+
+input{
+    width:100%;
+    padding:14px 16px;
+    border:1px solid #d1d9e6;
+    border-radius:12px;
+    font-size:15px;
+    background:#f8fbff;
+    transition:.25s ease;
+}
+
+input:focus{
+    outline:none;
+    border-color:#1f3b73;
+    box-shadow:0 0 18px rgba(31,59,115,.18);
+    background:#ffffff;
+}
+
+button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    background:#1f3b73;
+    color:#fff;
+    font-size:17px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.25s ease;
+    box-shadow:0 12px 24px rgba(31,59,115,.18);
+}
+
+button:hover{
+    background:#162b56;
+    transform:translateY(-2px);
+}
+
+a{
+    text-decoration:none;
+}
+
+.result{
+    margin-top:26px;
+    background:#eef4ff;
+    padding:22px;
+    border-radius:14px;
+    border-left:5px solid #1f3b73;
+    text-align:center;
+}
+
+.prediction{
+    margin-top:12px;
+    font-size:30px;
+    color:#0a8f08;
+    font-weight:700;
+}
+
+.footer{
+    text-align:center;
+    margin-top:22px;
+    color:#6d7587;
+    font-size:13px;
+}
+
+@media(max-width:600px){
+    .container{
+        width:95%;
+        padding:24px 20px;
+    }
+
+    h1{
+        font-size:28px;
+    }
+}

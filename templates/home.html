@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+<h1>🔥 FWI Prediction</h1>
+
+<form action="{{ url_for('predict_datapoint') }}" method="post">
+
+<div class="input-group">
+<input type="text" name="Temperature" placeholder="🌡 Temperature" required>
+</div>
+
+<div class="input-group">
+<input type="text" name="RH" placeholder="💧 Relative Humidity" required>
+</div>
+
+<div class="input-group">
+<input type="text" name="Ws" placeholder="💨 Wind Speed" required>
+</div>
+
+<div class="input-group">
+<input type="text" name="Rain" placeholder="🌧 Rain" required>
+</div>
+
+<div class="input-group">
+<input type="text" name="FFMC" placeholder="FFMC" required>
+</div>
+
+<div class="input-group">
+<input type="text" name="DMC" placeholder="DMC" required>
+</div>
+
+<div class="input-group">
+<input type="text" name="ISI" placeholder="ISI" required>
+</div>
+
+<div class="input-group">
+<input type="text" name="Classes" placeholder="Class (0 or 1)" required>
+</div>
+
+<div class="input-group">
+<input type="text" name="region" placeholder="Region (0 or 1)" required>
+</div>
+
+<button type="submit">Predict FWI</button>
+
+</form>
+
+{% if results %}
+
+<div class="result">
+
+<h2>FWI Prediction</h2>
+
+<div class="prediction">
+
+{{ results }}
+
+</div>
+
+</div>
+
+{% endif %}
+
+<div class="footer">
+Forest Fire Prediction using Flask & Machine Learning
+</div>
+
+</div>
+
+</body>
+</html>
